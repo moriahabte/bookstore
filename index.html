@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" type="text/css" href="jquery.fancybox.min.css">
+    <title>books</title>
+</head>
+
+<body>
+    <div class="body" id="app">
+
+       <div>
+        <h2>Bookstore</h2>
+
+
+       <input id="searchbar" type="text" v-model="search" placeholder="search books">
+</div>
+
+
+
+
+        <div  class="flip-container" ontouchstart="this.classList.toggle('hover');" v-for="book in books" :data-title="book.titulo">
+            <ul class="flipper">
+                <li class="front">
+                    <img v-bind:src="book.portada">
+                </li>
+                <li class="back">
+                    <p>{{ book.titulo  }}</p>
+                    <p>{{ book.descripcion }}</p>
+                    <a v-bind:href="book.detalle" data-fancybox="images" data-caption="This image has a caption">
+                        <button>more info</button>
+                    </a>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- Optional JavaScript -->
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+    <!-- JS -->
+    <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="jquery.fancybox.min.js"></script>
+    <script src="books.js"></script>
+
+</body>
+
+</html>
